@@ -1,10 +1,11 @@
 import React from 'react';
-import LoginForm from './LoginForm'
+import Sidebar from './Sidebar';
+import LoginPage from './login/LoginPage';
 
 const App = () => (
   <div id="app">
-    <LoginForm />
-    <a href="sign_up">Ainda não possui conta? Cadastre-se aqui!</a>
+    <Sidebar />
+    <LoginPage />
   </div>
 );
 
