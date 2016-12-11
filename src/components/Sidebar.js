@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Sidebar = () => (
-  <div className="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+  <div className="sidebar" data-color="purple">
     <div className="sidebar-wrapper">
 			<div className="logo">
 				<a href="http://www.creative-tim.com" className="simple-text">

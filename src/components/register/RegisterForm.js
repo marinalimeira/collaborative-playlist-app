@@ -1,5 +1,5 @@
 import React from 'react';
-import classnames from 'classnames';
+import TextField from '../common/TextField';
 
 class RegisterForm extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class RegisterForm extends React.Component {
   }
 
   onChange(e) {
-    // map state to props
+    // map state to props?
     this.setState({ [e.target.name]: e.target.value });
   }
 
@@ -35,39 +35,29 @@ class RegisterForm extends React.Component {
       <form onSubmit={this.onSubmit}>
         <div className="row">
           <div className="col-md-12">
-            <div className={classnames("form-group", 'has-error': errors.name)}>
-              <label htmlFor="name">Nome</label>
-              <input type="text" value={this.state.name} name="name" onChange={this.onChange} className="form-control" />
-              {errors.name}
-            </div>
+            <TextField error={errors.name} value={this.state.name} onChange={this.onChange} field="name" label="Nome"/>
           </div>
         </div>
 
         <div className="row">
           <div className="col-md-12">
-            <div className={classnames("form-group", 'has-error': errors.email)}>
-              <label htmlFor="email">E-mail</label>
-              <input type="email" value={this.state.email} name="email" onChange={this.onChange} className="form-control" />
-              {errors.email}
-            </div>
+            <TextField error={errors.email} value={this.state.email} onChange={this.onChange}
+                       field="email" label="E-mail" type="email"
+            />
           </div>
         </div>
 
         <div className="row">
           <div className="col-md-6">
-            <div className={classnames("form-group", 'has-error': errors.password)}>
-              <label htmlFor="password">Senha</label>
-              <input type="password" value={this.state.password} name="password" onChange={this.onChange} className="form-control" />
-              {errors.password}
-            </div>
+            <TextField error={errors.password} value={this.state.password} onChange={this.onChange}
+                       field="password" label="Senha" type="password"
+            />
           </div>
 
           <div className="col-md-6">
-            <div className={classnames("form-group", 'has-error': errors.password_confirmation)}>
-              <label htmlFor="password_confirmation">Confirmação de Senha</label>
-              <input type="password" value={this.state.password_confirmation} name="password_confirmation" onChange={this.onChange} className="form-control" />
-              {errors.password_confirmation}
-            </div>
+            <TextField error={errors.password_confirmation} value={this.state.password_confirmation}
+                       onChange={this.onChange} field="password_confirmation" label="Confirmação de senha" type="password"
+            />
           </div>
         </div>
 

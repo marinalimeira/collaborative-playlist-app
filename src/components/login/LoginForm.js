@@ -1,4 +1,5 @@
 import React from 'react';
+import TextField from '../common/TextField';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -27,19 +28,13 @@ class LoginForm extends React.Component {
       <form onSubmit={this.onSubmit}>
         <div className="row">
           <div className="col-md-12">
-            <div className="form-group">
-              <label htmlFor="email">E-mail</label>
-              <input type="email" value={this.state.email} name="email" onChange={this.onChange} className="form-control" />
-            </div>
+            <TextField value={this.state.email} onChange={this.onChange} field="email" label="E-mail" type="email"/>
           </div>
         </div>
 
         <div className="row">
           <div className="col-md-12">
-            <div className="form-group">
-              <label htmlFor="password">Senha</label>
-              <input type="password" value={this.state.password} name="password" onChange={this.onChange} className="form-control" />
-            </div>
+            <TextField value={this.state.password} onChange={this.onChange} field="password" label="Senha" type="password"/>
           </div>
         </div>
 
