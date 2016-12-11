@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 
 class RegisterForm extends React.Component {
   constructor(props) {
@@ -17,16 +16,13 @@ class RegisterForm extends React.Component {
   }
 
   onChange(e) {
+    // map state to props
     this.setState({ [e.target.name]: e.target.value });
   }
 
   onSubmit(e) {
     e.preventDefault();
-    $.post('http://localhost:3000/api/v1/users', this.state)
-      .done((a) => console.log("done", a))
-      .fail((a) => console.log("fail", a));
-
-    // send to enother file. utils/users
+    this.props.userRegisterRequest(this.state);
   }
 
   render() {
@@ -71,6 +67,10 @@ class RegisterForm extends React.Component {
       </form>
     );
   }
+}
+
+RegisterForm.propTypes = {
+  userRegisterRequest: React.PropTypes.func.isRequired,
 }
 
 export default RegisterForm;

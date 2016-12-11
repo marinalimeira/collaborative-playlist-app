@@ -1,11 +1,15 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import LoginPage from './login/LoginPage';
+import { Link } from 'react-router';
 
 const App = () => (
-  <div id="app">
+  <div className="wrapper">
     <Sidebar />
-    <LoginPage />
+    <div className="main-panel">
+      <Link to="/register">Registro</Link> <br />
+      <Link to="/login">Entrar</Link>
+    </div>
   </div>
 );
 
