@@ -15,7 +15,7 @@ class RegisterPage extends React.Component {
                 <div className="col-md-4 col-md-offset-4">
                     <div className="card">
                         <div className="header">
-                            <h4 className="title">Register</h4>
+                            <h4 className="title">Cadastro</h4>
                         </div>
 
                         <div className="content">

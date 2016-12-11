@@ -10,6 +10,7 @@
   "author": "Marina Limeira",
   "license": "ISC",
   "dependencies": {
+    "classnames": "^2.2.5",
     "jquery": "^3.1.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
