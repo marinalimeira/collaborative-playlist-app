@@ -32,42 +32,45 @@ class RegisterForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <label htmlFor="name">Nome</label>
-        <input
-         type="text"
-         value={this.state.name}
-         name="name"
-         onChange={this.onChange}
-        />
+        <div className="row">
+          <div className="col-md-12">
+            <div className="form-group">
+              <label htmlFor="name">Nome</label>
+              <input type="text" value={this.state.name} name="name" onChange={this.onChange} className="form-control" />
+            </div>
+          </div>
+        </div>
 
-        <label htmlFor="email">E-mail</label>
-        <input
-         type="email"
-         value={this.state.email}
-         name="email"
-         onChange={this.onChange}
-        />
+        <div className="row">
+          <div className="col-md-12">
+            <div className="form-group">
+              <label htmlFor="email">E-mail</label>
+              <input type="email" value={this.state.email} name="email" onChange={this.onChange} className="form-control" />
+            </div>
+          </div>
+        </div>
 
-        <label htmlFor="password">Senha</label>
-        <input
-         type="password"
-         value={this.state.password}
-         name="password"
-         onChange={this.onChange}
-        />
+        <div className="row">
+          <div className="col-md-6">
+            <div className="form-group">
+              <label htmlFor="password">Senha</label>
+              <input type="password" value={this.state.password} name="password" onChange={this.onChange} className="form-control" />
+            </div>
+          </div>
 
-        <label htmlFor="password_confirmation">Confirmação de Senha</label>
-        <input
-         type="password"
-         value={this.state.password_confirmation}
-         name="password_confirmation"
-         onChange={this.onChange}
-        />
+          <div className="col-md-6">
+            <div className="form-group">
+              <label htmlFor="password_confirmation">Confirmação de Senha</label>
+              <input type="password" value={this.state.password_confirmation} name="password_confirmation" onChange={this.onChange} className="form-control" />
+            </div>
+          </div>
+        </div>
 
-        <button type="submit">Registrar</button>
+        <button type="submit" className="btn btn-info btn-fill pull-right">Registrar</button>
+        <div className="clearfix"></div>
       </form>
     );
   }
 }
 
-export default RegisterPage;
+export default RegisterForm;

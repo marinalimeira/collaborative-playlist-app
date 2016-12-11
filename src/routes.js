@@ -10,6 +10,7 @@ export default (
     <Route path="/" component={App}>
     </Route>
 
-    <Route path="register" component={RegisterForm} />
+    <Route path="register" component={RegisterPage} />
+    <Route path="login" component={LoginPage} />
   </div>
 );
