@@ -1,5 +1,6 @@
 import React from 'react';
 import TextField from '../common/TextField';
+import { browserHistory } from 'react-router';
 
 class RegisterForm extends React.Component {
   constructor(props) {
@@ -26,7 +27,8 @@ class RegisterForm extends React.Component {
     this.setState({ errors: {} });
     e.preventDefault();
     this.props.userRegisterRequest(this.state)
-    .fail((error) => this.setState({ errors: JSON.parse(error.responseText) }));
+        .done((data) => browserHistory.push("/login"))
+        .fail((error) => this.setState({ errors: JSON.parse(error.responseText) }));
   }
 
   render() {

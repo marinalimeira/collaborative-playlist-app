@@ -8,6 +8,7 @@ class LoginForm extends React.Component {
     this.state = {
       email: '',
       password: '',
+      errors: '',
     }
 
     this.onChange = this.onChange.bind(this);
@@ -20,12 +21,16 @@ class LoginForm extends React.Component {
 
   onSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
+    this.props.userLoginRequest(this.state)
+        .fail((error) => this.setState({ errors: JSON.parse(error.responseText) }))
   }
 
   render() {
+    const { error } = this.state;
     return (
       <form onSubmit={this.onSubmit}>
+        {error}
+
         <div className="row">
           <div className="col-md-12">
             <TextField value={this.state.email} onChange={this.onChange} field="email" label="E-mail" type="email"/>
@@ -43,6 +48,10 @@ class LoginForm extends React.Component {
       </form>
     );
   }
+}
+
+LoginForm.propTypes = {
+  userLoginRequest: React.PropTypes.func.isRequired,
 }
 
 export default LoginForm;

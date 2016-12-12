@@ -1,9 +1,13 @@
 import React from 'react';
 import LoginForm from './LoginForm';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
+import { userLoginRequest } from '../../actions/user';
 
-const LoginPage = () => (
-  <div className="content">
+class LoginPage extends React.Component {
+  render(){
+  const { userLoginRequest } = this.props;
+  return (<div className="content">
     <h1 /><h1 />
     <div className="container-fluid">
         <div className="row">
@@ -14,7 +18,7 @@ const LoginPage = () => (
                     </div>
 
                     <div className="content">
-                      <LoginForm />
+                      <LoginForm userLoginRequest={userLoginRequest} />
                     </div>
                     <div className="text-center content">
                       <Link to="/register">Ainda não possui conta? Cadastre-se aqui!</Link>
@@ -24,6 +28,10 @@ const LoginPage = () => (
         </div>
     </div>
   </div>
-)
+)}}
 
-export default LoginPage;
+LoginPage.propTypes = {
+  userLoginRequest: React.PropTypes.func.isRequired,
+}
+
+export default connect(null, { userLoginRequest })(LoginPage);
