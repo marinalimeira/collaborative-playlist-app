@@ -31,20 +31,11 @@ class LoginForm extends React.Component {
       <form onSubmit={this.onSubmit}>
         {error}
 
-        <div className="row">
-          <div className="col-md-12">
             <TextField value={this.state.email} onChange={this.onChange} field="email" label="E-mail" type="email"/>
-          </div>
-        </div>
 
-        <div className="row">
-          <div className="col-md-12">
             <TextField value={this.state.password} onChange={this.onChange} field="password" label="Senha" type="password"/>
-          </div>
-        </div>
 
         <button type="submit" className="btn btn-info btn-fill pull-right">Entrar</button>
-        <div className="clearfix"></div>
       </form>
     );
   }

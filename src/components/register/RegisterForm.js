@@ -35,33 +35,16 @@ class RegisterForm extends React.Component {
     const { errors } = this.state;
     return (
       <form onSubmit={this.onSubmit}>
-        <div className="row">
-          <div className="col-md-12">
             <TextField error={errors.name} value={this.state.name} onChange={this.onChange} field="name" label="Nome"/>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-md-12">
             <TextField error={errors.email} value={this.state.email} onChange={this.onChange}
                        field="email" label="E-mail" type="email"
             />
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-md-6">
             <TextField error={errors.password} value={this.state.password} onChange={this.onChange}
                        field="password" label="Senha" type="password"
             />
-          </div>
-
-          <div className="col-md-6">
             <TextField error={errors.password_confirmation} value={this.state.password_confirmation}
                        onChange={this.onChange} field="password_confirmation" label="Confirmação de senha" type="password"
             />
-          </div>
-        </div>
 
         <button type="submit" className="btn btn-info btn-fill pull-right">Registrar</button>
         <div className="clearfix"></div>

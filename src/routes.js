@@ -7,8 +7,7 @@ import App from './components/App';
 
 export default (
   <div>
-    <Route path="/" component={App}>
-    </Route>
+    <Route path="/" component={App} />
 
     <Route path="register" component={RegisterPage} />
     <Route path="login" component={LoginPage} />

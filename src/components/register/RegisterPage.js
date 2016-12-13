@@ -10,21 +10,9 @@ class RegisterPage extends React.Component {
     return (
       <div className="content">
         <h1 /><h1 />
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-md-4 col-md-offset-4">
-                    <div className="card">
-                        <div className="header">
-                            <h4 className="title">Cadastro</h4>
-                        </div>
+        <h4 className="title">Cadastro</h4>
 
-                        <div className="content">
-                          <RegisterForm userRegisterRequest={userRegisterRequest} />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <RegisterForm userRegisterRequest={userRegisterRequest} />
       </div>
     )
   }

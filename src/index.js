@@ -12,7 +12,8 @@ const store = createStore(
   applyMiddleware(thunk)
 );
 
-render(<Provider store={store}>
+render(
+  <Provider store={store}>
     <Router history={browserHistory} routes={routes} />
-    </Provider>, document.getElementById('main')
+  </Provider>, document.getElementById('main')
 );
