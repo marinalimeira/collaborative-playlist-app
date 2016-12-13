@@ -11,7 +11,7 @@ export const videoCreateRequest = (data) => {
         request.setRequestHeader('Authorization', `Bearer ${token}`)
       },
       data: data,
-    })
+    }).done(() => window.location.reload())
   )
 }
 

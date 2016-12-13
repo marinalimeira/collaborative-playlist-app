@@ -23,7 +23,7 @@ export const userLoginRequest = (data) => (
             localStorage.setItem('name', data.name)
             localStorage.setItem('email', data.email)
           })
-          browserHistory.push("/")
+          window.location.reload();
         })
   )
 )
