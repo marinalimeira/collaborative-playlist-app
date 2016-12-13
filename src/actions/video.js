@@ -1,7 +1,9 @@
 import $ from 'jquery';
 
-export const videoCreateRequest = (data) => {
-  dispatch => (
+const token = localStorage.getItem("token");
+
+export const videoCreateRequest = (data) => { 
+ return dispatch => (
     $.ajax({
       method: 'POST',
       url: 'http://localhost:3000/api/v1/videos',
@@ -14,7 +16,7 @@ export const videoCreateRequest = (data) => {
 }
 
 export const videoGetRequest = (data) => {
-  dispatch => (
+  return dispatch => (
     $.ajax({
       method: 'GET',
       url: 'http://localhost:3000/api/v1/videos',

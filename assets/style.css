@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Lato');
+
+.wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: 'Lato';
+  color: #110B23;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: lowercase;
+  text-align: right; 
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
+  font-size: 19px;
+  font-family: 'Lato';
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sent-by {
+  color: #999;
+  right: 0;
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-family: 'Open Sans';
+}
+
+li.video {
+  margin-top: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+li.video iframe {
+  width: 100%; 
+}
+
+.inline {
+  display: inline;
+}
+
+button {
+  background: #211741;
+  border: 0;
+  color: #fff;
+  width: 240px;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Lato';
+}
+
+.center {
+  text-align: center;
+}
+
+.video-form input {
+  width: 440px;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #1CCBCE;
+}

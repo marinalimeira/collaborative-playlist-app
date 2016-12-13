@@ -7,26 +7,13 @@ import { userLoginRequest } from '../../actions/user';
 class LoginPage extends React.Component {
   render(){
   const { userLoginRequest } = this.props;
-  return (<div className="content">
-    <h1 /><h1 />
-    <div className="container-fluid">
-        <div className="row">
-            <div className="col-md-4 col-md-offset-4">
-                <div className="card">
-                    <div className="header">
-                        <h4 className="title">Login</h4>
-                    </div>
+  return (
+    <div className="wrapper center">
+      <h1 /><h1 />
+      <h2 className="title">LOGIN</h2>
 
-                    <div className="content">
-                      <LoginForm userLoginRequest={userLoginRequest} />
-                    </div>
-                    <div className="text-center content">
-                      <Link to="/register">Ainda não possui conta? Cadastre-se aqui!</Link>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      <LoginForm userLoginRequest={userLoginRequest} /><br />
+      <Link to="/register">Ainda não possui conta? Cadastre-se aqui!</Link>
   </div>
 )}}
 

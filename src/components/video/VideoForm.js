@@ -16,23 +16,16 @@ class VideoForm extends React.Component {
 
   onSubmit(e) {
     e.preventDefault();
-    this.props.videoCreateRequest(this.state)
-      .done((a) => (console.log(a)));
+    this.props.videoCreateRequest(this.state);
   }
 
   render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <div className="row">
-          <div className="col-md-12">
-            <div className="form-group">
-              <TextField value={this.state.url}
-                          onChange={this.onChange} field="url" label="Url"
-              />
-              <button type="submit" className="btn btn-info btn-fill pull-right">Enviar</button>
-            </div>
-          </div>
-        </div>
+        <TextField value={this.state.url} classes="inline"
+          onChange={this.onChange} field="url" label="Url"
+        />
+        <button type="submit">Enviar</button>
       </form>      
     );
   }

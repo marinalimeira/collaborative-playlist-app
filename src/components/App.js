@@ -1,12 +1,19 @@
 import React from 'react';
-import LoginPage from './login/LoginPage';
 import VideoPage from './video/VideoPage';
-import { Link } from 'react-router';
+import Header from './Header';
+
+const renderContent = () => {
+  if (localStorage.getItem("name") === null) {
+    return (<div />);
+  } else {
+    return (<VideoPage />);
+  }
+}
 
 const App = () => (
   <div className="wrapper">
-    <Link to="/login">Entrar</Link>
-    <VideoPage />
+    <Header />
+    {renderContent()}
   </div>
 );
 

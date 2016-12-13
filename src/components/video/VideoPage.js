@@ -1,18 +1,20 @@
 import React from 'react';
 import VideoForm from './VideoForm';
 import VideoList from './VideoList';
-import { videoCreateRequest } from '../../actions/video';
+import { videoCreateRequest, videoGetRequest } from '../../actions/video';
+import { connect } from 'react-redux';
 
 class VideoPage extends React.Component {
- 
   render () {
     return (
       <div>
-        <VideoForm videoCreateRequest={videoCreateRequest} />
-        <VideoList />
+        <div className="video-form center">
+          <VideoForm videoCreateRequest={this.props.videoCreateRequest} />
+        </div>
+        <VideoList videoGetRequest={this.props.videoGetRequest} />
       </div>
     )
   }
 }
 
-export default VideoPage;
+export default connect(null, { videoCreateRequest, videoGetRequest })(VideoPage);

@@ -8,9 +8,9 @@ class RegisterPage extends React.Component {
   render(){
     const { userRegisterRequest } = this.props;
     return (
-      <div className="content">
+      <div className="wrapper center">
         <h1 /><h1 />
-        <h4 className="title">Cadastro</h4>
+        <h2>CADASTRO</h2>
 
         <RegisterForm userRegisterRequest={userRegisterRequest} />
       </div>

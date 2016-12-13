@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { browserHistory } from 'react-router';
 
 export const userRegisterRequest = (data) => (
   dispatch => (
@@ -22,6 +23,7 @@ export const userLoginRequest = (data) => (
             localStorage.setItem('name', data.name)
             localStorage.setItem('email', data.email)
           })
+          browserHistory.push("/")
         })
   )
 )

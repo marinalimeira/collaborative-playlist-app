@@ -1,10 +1,11 @@
 import React from 'react';
 import classnames from 'classnames';
 
-const TextField = ({ error, value, onChange, label, field, type }) => (
-  <div className={classnames("form-group", 'has-error': error)}>
-    <label htmlFor={field}>{label}</label>
-    <input type={type} value={value} name={field} onChange={onChange} className="form-control" />
+const TextField = ({ error, value, onChange, label, field, type, classes}) => (
+  <div className={classnames("form-group", 'has-error': error)} className={classes}>
+    <input type={type} value={value} name={field}
+           onChange={onChange} className="form-control" placeholder={label}
+    />
     {error}
   </div>
 )
@@ -12,6 +13,7 @@ const TextField = ({ error, value, onChange, label, field, type }) => (
 TextField.PropTypes = {
   field: React.PropTypes.string.isRequired,
   error: React.PropTypes.string,
+  classes: React.PropTypes.string,
   onChange: React.PropTypes.func.isRequired,
   value: React.PropTypes.string.isRequired,
   field: React.PropTypes.string.isRequired,
